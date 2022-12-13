@@ -1,11 +1,18 @@
 from rest_framework import serializers
-from EmployeeApp.models import Employees
+from EmployeeApp.models import Departments, Employees
 
-class EmployeesSerializer(serializers.ModelSerializer):
+class DepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Departments
+        fields = ('DepartmentId',
+                  'DepartmentName')
+
+class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employees
-        fields = ('EmployeeId', 
-                'EmployeeName',
-                'DepartmentName', 
-                'DataOfJoining',
-                'PhotoFileName')
+        fields = ('EmployeeId',
+                  'EmployeeName',
+                  'Department',
+                  'DateOfJoining',
+                  'PhotoFileName')
+                  
