@@ -1,27 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import { Home } from './Home';
-import { Employee } from './Employee';
-import { Navi } from './Navi';
-import { BrowserRouter } from 'react-router-dom';
-import { Routes ,Route } from 'react-router-dom';
 
+import './App.css';
+
+import {Home} from './Home';
+import {Department} from './Department';
+import {Employee} from './Employee';
+import {Navigation} from './Navigation';
+
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="container">
-      <h3 className= "m-3 d-flex justify-content-center">
-        ASd
-      </h3>
-      <Navi></Navi>
+     <h3 className="m-3 d-flex justify-content-center">
+       Welcome
+     </h3>
 
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/employee' element={<Employee></Employee>}></Route>
-      </Routes>
-    
-     
+     <Navigation/>
+
+     <Routes>
+       <Route path='/' element={<Home></Home>} exact/>
+       <Route path='/department' element={<Department></Department>}/>
+       <Route path='/employee' element={<Employee></Employee>}/>
+     </Routes>
     </div>
     </BrowserRouter>
   );
