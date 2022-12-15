@@ -4,8 +4,8 @@ import './App.css';
 import {Home} from './Home';
 import {Department} from './Department';
 import {Employee} from './Employee';
-import {Navigation} from './Navigation';
 
+import {Login} from './Login';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -16,10 +16,11 @@ function App() {
        Welcome
      </h3>
 
-     <Navigation/>
+     
 
      <Routes>
        <Route path='/' element={<Home></Home>} exact/>
+       <Route path='/login/' element={<Login></Login>}></Route>
        <Route path='/department' element={<Department></Department>}/>
        <Route path='/employee' element={<Employee></Employee>}/>
      </Routes>
