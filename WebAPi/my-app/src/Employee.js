@@ -46,7 +46,6 @@ export class Employee extends Component{
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>EmployeeId</th>
                         <th>EmployeeName</th>
                         <th>Department</th>
                         <th>DOJ</th>
@@ -56,7 +55,6 @@ export class Employee extends Component{
                     <tbody>
                         {emps.map(emp=>
                             <tr key={emp.EmployeeId}>
-                                <td>{emp.EmployeeId}</td>
                                 <td>{emp.EmployeeName}</td>
                                 <td>{emp.Department}</td>
                                 <td>{emp.DateOfJoining}</td>
