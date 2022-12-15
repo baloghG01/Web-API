@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Table} from 'react-bootstrap';
-
+import {Navigation} from './Navigation';
 import {Button,ButtonToolbar} from 'react-bootstrap';
 import {AddEmpModal} from './AddEmpModal';
 import {EditEmpModal} from './EditEmpModal';
@@ -43,6 +43,7 @@ export class Employee extends Component{
         let editModalClose=()=>this.setState({editModalShow:false});
         return(
             <div >
+                <Navigation></Navigation>
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
