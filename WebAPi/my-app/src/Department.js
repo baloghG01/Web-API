@@ -4,6 +4,7 @@ import {Table} from 'react-bootstrap';
 import {Button,ButtonToolbar} from 'react-bootstrap';
 import {AddDepModal} from './AddDepModal';
 import {EditDepModal} from './EditDepModal';
+import {Navigation} from './Navigation';
 
 export class Department extends Component{
 
@@ -43,6 +44,7 @@ export class Department extends Component{
         let editModalClose=()=>this.setState({editModalShow:false});
         return(
             <div >
+                <Navigation></Navigation>
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
